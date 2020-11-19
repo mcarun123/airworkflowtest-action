@@ -1,0 +1,18 @@
+name: Airworkflow Action
+description: action to interact with air backend
+
+inputs:
+  type:
+    description: This accounts for which run function to invoke.
+    required: true
+
+  function:
+    description: This is the name of the function to be deployed.
+    required: false
+    default: ""
+outputs:
+  exit_status: # id of output
+    description: This is a dummy output to exit the container.
+runs:
+  using: docker
+  image: Dockerfile
